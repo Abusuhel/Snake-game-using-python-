@@ -1,0 +1,70 @@
+import numpy as np import pandas as pd
+
+data = pd.read_csv('/content/lab2.csv')
+
+concepts = np.array(data.iloc[:,0:-1])
+
+print("
+Instances are: 
+",concepts) target = np.array(data.iloc[:,-1])
+
+print("
+Target Values are: ",target)
+
+def learn(concepts, target):
+
+specific_h concepts[0].copy()
+
+print("
+Initialization of specific h and genearal_h") print("
+Specific Boundary: ", specific_h)
+
+general h [["?" for i in range(len(specific_h))]
+
+for i in range(len(specific_h))] print("
+Generic Boundary: "general_h)
+
+for 1, h in enumerate(concepts): print("
+Instance", i+1, "is", h)
+
+if target[i] == "Yes":
+
+print("Instance is Positive "). for x in range(len(specific_h)):
+
+if h[x]!= specific_h[x]:
+
+specific_h[x] ='?'
+
+general_h[x][x] ='?'
+
+if target[i]== "No":
+
+print("Instance is Negative")
+
+for x in range(len(specific_b)):
+
+if h[x]!= specific_h[x]: general_h[x][x] = specific_h[x]
+
+else:
+
+general_h[x][x] = '?'
+
+print("Specific Bundary after", 1+1, "Instance is", specific_h) print("Generic Boundary after ", 1+1, "Instance is ", general_h)
+
+print("
+")
+
+indices [1 for 1, val in enumerate(general_h) if val == ]'?', '?', '?', '?יז' ,'?י י[[
+
+for i in indices:
+
+general_h.remove(['?', '?', '?', '?', '?', '?"])
+
+return specific_h, general_h
+
+s_final, final learn (concepts, target).
+
+print("Final Specific h: ", s_final, sep="
+")
+
+print("Final General h:", g final)
